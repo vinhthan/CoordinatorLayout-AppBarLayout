@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_height="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways"
+
+            app:tabMode="scrollable">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Tab1" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Tab2" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_3"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Tab3" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_4"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Tab4" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_5"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Tab5" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_6"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Tab6" />
+        </com.google.android.material.tabs.TabLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Custom view không chỉ về phương thức onDraw(), onMeasure() cũng quan trọng không kém và sau đây mình sẽ giới thiệu về nó…
+
+Nếu Bạn đã từng xây dựng ứng dụng với custom view trước đây, bạn có thể thường không phải override onMeasure, nhưng dù sao điều đó cũng phải một ý tưởng tồi: việc triển khai mặc định không nhận biết lượng không gian (diện tích) của bạn thực sự cần dùng vì nó chỉ tính đến sự kết hợp các thông số layout, thường được chỉ định trong XML. Do đó, bạn có thể bỏ qua ý nghĩ của mình về nó chiếm nhiều diện tích hơn là nó thực sự cần.Custom view không chỉ về phương thức onDraw(), onMeasure() cũng quan trọng không kém và sau đây mình sẽ giới thiệu về nó…
+
+Nếu Bạn đã từng xây dựng ứng dụng với custom view trước đây, bạn có thể thường không phải override onMeasure, nhưng dù sao điều đó cũng phải một ý tưởng tồi: việc triển khai mặc định không nhận biết lượng không gian (diện tích) của bạn thực sự cần dùng vì nó chỉ tính đến sự kết hợp các thông số layout, thường được chỉ định trong XML. Do đó, bạn có thể bỏ qua ý nghĩ của mình về nó chiếm nhiều diện tích hơn là nó thực sự cần.Custom view không chỉ về phương thức onDraw(), onMeasure() cũng quan trọng không kém và sau đây mình sẽ giới thiệu về nó…
+
+Nếu Bạn đã từng xây dựng ứng dụng với custom view trước đây, bạn có thể thường không phải override onMeasure, nhưng dù sao điều đó cũng phải một ý tưởng tồi: việc triển khai mặc định không nhận biết lượng không gian (diện tích) của bạn thực sự cần dùng vì nó chỉ tính đến sự kết hợp các thông số layout, thường được chỉ định trong XML. Do đó, bạn có thể bỏ qua ý nghĩ của mình về nó chiếm nhiều diện tích hơn là nó thực sự cần.Custom view không chỉ về phương thức onDraw(), onMeasure() cũng quan trọng không kém và sau đây mình sẽ giới thiệu về nó…
+
+Nếu Bạn đã từng xây dựng ứng dụng với custom view trước đây, bạn có thể thường không phải override onMeasure, nhưng dù sao điều đó cũng phải một ý tưởng tồi: việc triển khai mặc định không nhận biết lượng không gian (diện tích) của bạn thực sự cần dùng vì nó chỉ tính đến sự kết hợp các thông số layout, thường được chỉ định trong XML. Do đó, bạn có thể bỏ qua ý nghĩ của mình về nó chiếm nhiều diện tích hơn là nó thực sự cần.Custom view không chỉ về phương thức onDraw(), onMeasure() cũng quan trọng không kém và sau đây mình sẽ giới thiệu về nó…
+
+Nếu Bạn đã từng xây dựng ứng dụng với custom view trước đây, bạn có thể thường không phải override onMeasure, nhưng dù sao điều đó cũng phải một ý tưởng tồi: việc triển khai mặc định không nhận biết lượng không gian (diện tích) của bạn thực sự cần dùng vì nó chỉ tính đến sự kết hợp các thông số layout, thường được chỉ định trong XML. Do đó, bạn có thể bỏ qua ý nghĩ của mình về nó chiếm nhiều diện tích hơn là nó thực sự cần.Custom view không chỉ về phương thức onDraw(), onMeasure() cũng quan trọng không kém và sau đây mình sẽ giới thiệu về nó…
+
+Nếu Bạn đã từng xây dựng ứng dụng với custom view trước đây, bạn có thể thường không phải override onMeasure, nhưng dù sao điều đó cũng phải một ý tưởng tồi: việc triển khai mặc định không nhận biết lượng không gian (diện tích) của bạn thực sự cần dùng vì nó chỉ tính đến sự kết hợp các thông số layout, thường được chỉ định trong XML. Do đó, bạn có thể bỏ qua ý nghĩ của mình về nó chiếm nhiều diện tích hơn là nó thực sự cần.Custom view không chỉ về phương thức onDraw(), onMeasure() cũng quan trọng không kém và sau đây mình sẽ giới thiệu về nó…
+
+Nếu Bạn đã từng xây dựng ứng dụng với custom view trước đây, bạn có thể thường không phải override onMeasure, nhưng dù sao điều đó cũng phải một ý tưởng tồi: việc triển khai mặc định không nhận biết lượng không gian (diện tích) của bạn thực sự cần dùng vì nó chỉ tính đến sự kết hợp các thông số layout, thường được chỉ định trong XML. Do đó, bạn có thể bỏ qua ý nghĩ của mình về nó chiếm nhiều diện tích hơn là nó thực sự cần.Custom view không chỉ về phương thức onDraw(), onMeasure() cũng quan trọng không kém và sau đây mình sẽ giới thiệu về nó…
+
+Nếu Bạn đã từng xây dựng ứng dụng với custom view trước đây, bạn có thể thường không phải override onMeasure, nhưng dù sao điều đó cũng phải một ý tưởng tồi: việc triển khai mặc định không nhận biết lượng không gian (diện tích) của bạn thực sự cần dùng vì nó chỉ tính đến sự kết hợp các thông số layout, thường được chỉ định trong XML. Do đó, bạn có thể bỏ qua ý nghĩ của mình về nó chiếm nhiều diện tích hơn là nó thực sự cần.Custom view không chỉ về phương thức onDraw(), onMeasure() cũng quan trọng không kém và sau đây mình sẽ giới thiệu về nó…
+
+Nếu Bạn đã từng xây dựng ứng dụng với custom view trước đây, bạn có thể thường không phải override onMeasure, nhưng dù sao điều đó cũng phải một ý tưởng tồi: việc triển khai mặc định không nhận biết lượng không gian (diện tích) của bạn thực sự cần dùng vì nó chỉ tính đến sự kết hợp các thông số layout, thường được chỉ định trong XML. Do đó, bạn có thể bỏ qua ý nghĩ của mình về nó chiếm nhiều diện tích hơn là nó thực sự cần.Custom view không chỉ về phương thức onDraw(), onMeasure() cũng quan trọng không kém và sau đây mình sẽ giới thiệu về nó…
+
+Nếu Bạn đã từng xây dựng ứng dụng với custom view trước đây, bạn có thể thường không phải override onMeasure, nhưng dù sao điều đó cũng phải một ý tưởng tồi: việc triển khai mặc định không nhận biết lượng không gian (diện tích) của bạn thực sự cần dùng vì nó chỉ tính đến sự kết hợp các thông số layout, thường được chỉ định trong XML. Do đó, bạn có thể bỏ qua ý nghĩ của mình về nó chiếm nhiều diện tích hơn là nó thực sự cần."
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@android:drawable/ic_input_add"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp" />"
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
